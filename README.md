@@ -2,13 +2,9 @@
 <!-- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14991371.svg)](https://doi.org/10.5281/zenodo.14991371) this is the dataset badge, but later, the article badge should be added. -->
 
 **Authors** 
-Mirjam Visscher <a href="https://orcid.org/0000-0003-2152-0278"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" width="14px" height="14px"></a>  Frans Wiering <a href="https://orcid.org/0000-0002-2984-8932"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" width="14px" height="14px"></a>
+Mirjam Visscher <a href="https://orcid.org/0000-0003-2152-0278"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" width="14px" height="14px"></a>  Frans Wiering <a href="https://orcid.org/0000-0002-2984-8932"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" width="14px" height="14px"></a>, Information and Computing Sciences, Utrecht University, The Netherlands 
 
 **Project** [CANTOSTREAM](https://www.projects.science.uu.nl/ics-cantostream/)
-
-**Department** Information and Computing Sciences, Utrecht University, The Netherlands 
-
-**Date** 14 March 2025
 
 ## Description
 Fuzzy Frequencies is a framework to analyse the pitch content of symbolic encodings and multiple f0 estimations. Multiple f0 estimators are algorithms that extract the fundamental frequencies of multiple voices and instruments in an audio recording.
