@@ -13,33 +13,46 @@ Mirjam Visscher <a href="https://orcid.org/0000-0003-2152-0278"><img src="https:
 ## Description
 Fuzzy Frequencies is a framework to analyse the pitch content of symbolic encodings and multiple f0 estimations. Multiple f0 estimators are algorithms that extract the fundamental frequencies of multiple voices and instruments in an audio recording.
 
-These are the extraction types currently implemented: 
-- **Symbolic encodings** is music, encoded with the use of a finite alphabet to make music computer-readable. In this experiment, the [MusicXML tutorial](https://www.w3.org/2021/06/musicxml40/tutorial/introduction/) format has been used.
-
-Multiple f0 estimations by four different algorithms:
-
-* The __Basicpitch__ extractions are created by applying the model by Bittner et al. (2022) [1] to the set of audio recordings. The implementation can be found at [https://github.com/spotify/basic-pitch](https://github.com/spotify/basic-pitch)
-
-* The __Multipitch__ extractions are created by applying the model by Weiß and Müller (2024) [5] to the set of audio recordings, with model 214c and 195f. The implementation can be found at [https://github.com/christofw/multipitch_architectures](https://github.com/christofw/multipitch_architectures)
-
-* The __Multif0__ extractions are created by applying the model by Cuesta et al. (2020) [2] to the audio files. The original implementation is based on Tensorflow 1 and can be found on [https://github.com/helenacuesta/multif0-estimation-polyvocals](https://github.com/helenacuesta/multif0-estimation-polyvocals). An implementation based on Tensorflow 2 can be found on [https://github.com/MirjamVisscher/multif0-estimation-polyvocals-tf2](https://github.com/MirjamVisscher/multif0-estimation-polyvocals-tf2), with many thanks to Sebastian Stober, who migrated the code from tf1 to tf2!
-
-* The __symbolic encodings__ are downloaded from [The Josquin Research Project](https://josquin.stanford.edu/)
-
-And two other methods for pitch extraction:
-- **CQT** is the Constant Q Transform[6], and forms the input of many multiple f0 estimators. It is the only method that does not filter our harmonics and is fast, but not very effective. It is implemented in Librosa as [chroma_cqt](https://librosa.org/doc/main/generated/librosa.feature.chroma_cqt.html).
-- **HPCP** is a fast method to extract harmonic pitch class profiles, developed by Gómez[4] and implemented in the Essentia toolbox as [HPCP](https://essentia.upf.edu/reference/std_HPCP.html).
-
-One method is under development:
-
-* The __MT3__ extractions are created by extracting the audio files smaller than ~110 MB using the [Colab notebook](https://colab.research.google.com/github/magenta/mt3/blob/main/mt3/colab/music_transcription_with_transformers.ipynb.) provided by Gardner et al (2022) [3].The implementation can be found on [https://github.com/magenta/mt3](https://github.com/magenta/mt3). For the dataset, we have used the [colab notebook](https://colab.research.google.com/github/magenta/mt3/blob/main/mt3/colab/music_transcription_with_transformers.ipynb).
-
-
 The method is introduced and described in the paper (currently submitted, not yet accepted):
 
 Visscher, M.; Wiering, F. Fuzzy Frequencies: Finding tonal structures in audio recordings of Renaissance polyphony. *Journal name upon publication* 2025, 1-22.
 
+
+## Folder structure
+```plaintext
+FuzzyFrequencies
+├── data
+│   ├── processed
+│   └── raw
+│       ├── CANTO-JRP
+│       ├── experiment_template
+│       └── Palestrina
+├── results
+│   ├── figures
+│   └── output
+└── src
+```
+
 ## Installation
+
+<details>
+  <summary>List of dependencies</summary>
+
+- `python 3.10`
+- `scipy`
+- `numpy`
+- `matplotlib`
+- `pandas`
+- `seaborn`
+- `scikit-learn`
+- `statsmodels`
+- `librosa`
+- `music21`
+- `pydub`
+- `essentia`
+- `scikit-posthocs`
+
+</details>
 
 To install the package on a local computer, please follow these steps:
 1. Clone the repository:
@@ -60,41 +73,37 @@ To install the package on a local computer, please follow these steps:
     conda activate fuzzy
     ```
 
-### Dependencies
-* python 3.10
-* scipy
-* numpy
-* matplotlib
-* pandas
-* seaborn
-* scikit-learn
-* statsmodels
-* librosa
-* music21
-* pydub
-* essentia
-* scikit-posthocs
+
 
 ## Project workflow and code
 The project workflow is partially covered by the code in this repository (see the purple boxes in Figure 1). The `creation of the dataset` was mainly handywork, whereas the `pitch extraction` were done by large algorithms that are not integrated in this repository.
 
 ![Fuzzy Methods](fuzzy_methods_readme.drawio.png)
 <p align="right"><b>Figure 1</b> Project workflow, the purple boxes are covered by the code in this repository. </p>
- 
-## Folder structure
-```plaintext
-FuzzyFrequencies
-├── data
-│   ├── processed
-│   └── raw
-│       ├── CANTO-JRP
-│       ├── experiment_template
-│       └── Palestrina
-├── results
-│   ├── figures
-│   └── output
-└── src
-```
+
+## Pitch extraction methods
+
+These are the extraction types for which currently the analysis is implemented: 
+- **Symbolic encodings** is music, encoded with the use of a finite alphabet to make music computer-readable. In this experiment, the [MusicXML tutorial](https://www.w3.org/2021/06/musicxml40/tutorial/introduction/) format has been used.
+
+Multiple f0 estimations by four different algorithms:
+
+* The __Basicpitch__ extractions are created by applying the model by Bittner et al. (2022) [1] to the set of audio recordings. The implementation can be found at [https://github.com/spotify/basic-pitch](https://github.com/spotify/basic-pitch)
+
+* The __Multipitch__ extractions are created by applying the model by Weiß and Müller (2024) [5] to the set of audio recordings, with model 214c and 195f. The implementation can be found at [https://github.com/christofw/multipitch_architectures](https://github.com/christofw/multipitch_architectures)
+
+* The __Multif0__ extractions are created by applying the model by Cuesta et al. (2020) [2] to the audio files. The original implementation is based on Tensorflow 1 and can be found on [https://github.com/helenacuesta/multif0-estimation-polyvocals](https://github.com/helenacuesta/multif0-estimation-polyvocals). An implementation based on Tensorflow 2 can be found on [https://github.com/MirjamVisscher/multif0-estimation-polyvocals-tf2](https://github.com/MirjamVisscher/multif0-estimation-polyvocals-tf2), with many thanks to Sebastian Stober, who migrated the code from tf1 to tf2!
+
+* The __symbolic encodings__ are downloaded from [The Josquin Research Project](https://josquin.stanford.edu/)
+
+And two other methods for pitch extraction:
+- **CQT** is the Constant Q Transform[6], and forms the input of many multiple f0 estimators. It is the only method that does not filter our harmonics and is fast, but not very effective. It is implemented in Librosa as [chroma_cqt](https://librosa.org/doc/main/generated/librosa.feature.chroma_cqt.html).
+- **HPCP** is a fast method to extract harmonic pitch class profiles, developed by Gómez[4] and implemented in the Essentia toolbox as [HPCP](https://essentia.upf.edu/reference/std_HPCP.html).
+
+One method is under development:
+
+* The __MT3__ extractions are created by extracting the audio files smaller than ~110 MB using the [Colab notebook](https://colab.research.google.com/github/magenta/mt3/blob/main/mt3/colab/music_transcription_with_transformers.ipynb.) provided by Gardner et al (2022) [3].The implementation can be found on [https://github.com/magenta/mt3](https://github.com/magenta/mt3). For the dataset, we have used the [colab notebook](https://colab.research.google.com/github/magenta/mt3/blob/main/mt3/colab/music_transcription_with_transformers.ipynb).
+
 
 ## Class Overview
 
