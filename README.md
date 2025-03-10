@@ -1,26 +1,6 @@
 # Fuzzy Frequencies [![MIT license](https://img.shields.io/badge/License-MIT-green.svg)](https://lbesson.mit-license.org/) [![GitHub](https://img.shields.io/badge/GitHub-Fuzzy%20Frequencies-181717?logo=github&logoColor=white&color=800080)](https://github.com/MirjamVisscher/FuzzyFrequencies)  [![Spotify Playlist](https://img.shields.io/badge/Spotify-CANTO--JRP-1DB954?logo=spotify&logoColor=1DB954)](https://open.spotify.com/playlist/2QyBpYbo1W5fZhjrIx1uew?si=ef55e1ae74294179) [![Review status](https://img.shields.io/badge/Peer%20Review-Under%20review-yellow.svg)]() 
 <!-- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14991371.svg)](https://doi.org/10.5281/zenodo.14991371) this is the dataset badge, but later, the article badge should be added. -->
 
-TODO:
-* create a .gitignore
-* create a list that should be uploaded to the repo
-
-DONE:
-* create OOP model
-* add model below
-* add folder structure
-* write installation instructions
-* describe dataset
-* create software release
-* improve contribution section
-* add cite section
-* fill out acknowledgements
-* write the description
-* add hyperlinks or references to the models in the description
-* add links to repositories of mp, bp, mfo, MT3
-* find out what is the best practice for the main.py
-* create experiment format
-
 **Authors** 
 Mirjam Visscher <a href="https://orcid.org/0000-0003-2152-0278"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" width="14px" height="14px"></a>  Frans Wiering <a href="https://orcid.org/0000-0002-2984-8932"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" width="14px" height="14px"></a>
 
@@ -57,7 +37,7 @@ One method is under development:
 
 The method is introduced and described in the paper (currently submitted, not yet accepted):
 
-Visscher, M.; Wiering, F. Fuzzy Frequencies: Finding tonal structures in audio recordings of Renaissance polyphony. *Journal name* 2025, 1-22.
+Visscher, M.; Wiering, F. Fuzzy Frequencies: Finding tonal structures in audio recordings of Renaissance polyphony. *Journal name upon publication* 2025, 1-22.
 
 ## Installation
 
