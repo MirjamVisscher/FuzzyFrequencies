@@ -7,6 +7,8 @@
 *.pptx
 *.pdf
 *.html
+*.zip
+*.xcf
 
 fuzzy_methods_readme.drawio
 /src/test*
@@ -24,7 +26,9 @@ fuzzy_methods_readme.drawio
 *__pycache__
 */archive/*
 
+/data/raw/archive*
 /data/raw/*/*/*.csv
+/data/raw/*/*/*/*.csv
 /data/raw/*/*/*.mid
 /data/raw/*/*/*.musicxml
 /data/raw/*/*/*.mp3
@@ -32,6 +36,7 @@ fuzzy_methods_readme.drawio
 /data/processed/CANTO_JRP/
 /data/processed/JRP/
 /data/processed/Palestrina/
+/data/processed/*
 
 /results/figures/*/*/*/*.png
 /results/figures/*/*/*.png

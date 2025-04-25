@@ -165,8 +165,10 @@ def visualise_distances(experiment, profile_type, plot_type, distance_type, save
         
         if plot_type == 'histogram':
             plt.hist(column_data, bins=bins, alpha=0.5, label=column, density=True)
+            plt.ylabel('Compositions')
         elif plot_type == 'line':
             sns.kdeplot(column_data, label=column, fill=False, bw_adjust=0.5)
+            plt.ylabel('Density')
     y_min, y_max = plt.ylim()
     raw_step = max(1, (y_max - y_min) // 10)  # Initial adaptive step
     tick_step = max(5, int(np.ceil(raw_step / 5) * 5))  # Round up to nearest multiple of 5
@@ -175,7 +177,7 @@ def visualise_distances(experiment, profile_type, plot_type, distance_type, save
     plt.xlim(0,0.4)
     
     plt.xlabel(f'{distance_type.capitalize()} distance to symbolic profile')
-    plt.ylabel('compositions')
+    
     # plt.yticks(np.arange(plt.ylim()[0], plt.ylim()[1] + 1, 1).astype(int))
 
     # plt.title(f'Distribution of Squared Distances for {profile_type}\nUsing Various Chroma Extraction Methods')
@@ -184,6 +186,5 @@ def visualise_distances(experiment, profile_type, plot_type, distance_type, save
         
     if save == True:
         plt.savefig(output_path)
-        print(f"Plot saved to {output_path}")    
-
+        print(f"Plot saved to {output_path}")   
 
