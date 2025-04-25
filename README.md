@@ -9,9 +9,10 @@ Mirjam Visscher <a href="https://orcid.org/0000-0003-2152-0278"><img src="https:
 ## Description
 Fuzzy Frequencies is a framework to analyse the pitch content of symbolic encodings and multiple f0 estimations. Multiple f0 estimators are algorithms that extract the fundamental frequencies of multiple voices and instruments in an audio recording.
 
-The method is introduced and described in the paper (currently submitted, not yet accepted):
+The method is introduced and described in the paper under review and available as a preprint:
 
 Visscher, M.; Wiering, F. Fuzzy Frequencies: Finding tonal structures in audio recordings of Renaissance polyphony. *Journal name upon publication* 2025, 1-22.
+https://www.preprints.org/manuscript/202504.2129/v1
 
 
 ## Folder structure
