@@ -9,11 +9,9 @@ Mirjam Visscher <a href="https://orcid.org/0000-0003-2152-0278"><img src="https:
 ## Description
 Fuzzy Frequencies is a framework to analyse the pitch content of symbolic encodings and multiple f0 estimations. Multiple f0 estimators are algorithms that extract the fundamental frequencies of multiple voices and instruments in an audio recording.
 
-The method is introduced and described in the paper under review and available as a preprint:
+The method is introduced and described in the article:
 
-Visscher, M.; Wiering, F. Fuzzy Frequencies: Finding tonal structures in audio recordings of Renaissance polyphony. *Journal name upon publication* 2025, 1-22.
-https://www.preprints.org/manuscript/202504.2129/v1
-
+Visscher, M., & Wiering, F. (2025). Fuzzy Frequencies: Finding Tonal Structures in Audio Recordings of Renaissance Polyphony. Heritage, 8(5), 164. https://doi.org/10.3390/heritage8050164
 
 ## Folder structure
 ```plaintext
@@ -445,16 +443,17 @@ Visscher, M.; Wiering, F. Fuzzy Frequencies: Finding tonal structures in audio r
 
 ```bibtex
 @article{visscher2025fuzzy,
-  author       = {Mirjam Visscher and
-                  Frans Wiering},
-  title        = {Fuzzy Frequencies: Finding tonal structures in audio recordings of Renaissance polyphony},
-  journal      = {*upon publication*},  % Add actual journal name if available
-  year         = {2025},
-  volume       = {*upon publication*},  % Add volume if available
-  number       = {*upon publication*},  % Add issue number if available
-  pages        = {*upon publication*},  % Add page range if available
-  doi          = {*upon publication*},
+  title     = {Fuzzy Frequencies: Finding Tonal Structures in Audio Recordings of Renaissance Polyphony},
+  author    = {Visscher, M. and Wiering, F.},
+  journal   = {Heritage},
+  volume    = {8},
+  number    = {5},
+  pages     = {164},
+  year      = {2025},
+  doi       = {10.3390/heritage8050164},
+  url       = {https://doi.org/10.3390/heritage8050164}
 }
+
 ```
 
 ## Acknowledgments 

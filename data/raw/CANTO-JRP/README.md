@@ -18,9 +18,9 @@ Mirjam Visscher <a href="https://orcid.org/0000-0003-2152-0278"><img src="https:
 This `README.md` file provides an overview of the CANTO-JRP Dataset, which is based on compositions from the Josquin Research Project, limited to those available on Spotify at the time the dataset was created.
 Due to copyright restrictions, the recordings themselves are not publicly available. Instead, the dataset includes multiple f0 estimations (from various models), symbolic encodings, and metadata.
 
-The dataset is described in the paper (currently submitted, not yet accepted):
+The dataset is described in the article:
 
-Visscher, M.; Wiering, F. Fuzzy Frequencies: Finding tonal structures in audio recordings of Renaissance polyphony. *Journal name* 2025, 1-22.
+Visscher, M., & Wiering, F. (2025). Fuzzy Frequencies: Finding Tonal Structures in Audio Recordings of Renaissance Polyphony. Heritage, 8(5), 164. https://doi.org/10.3390/heritage8050164
 
 ## Folder Structure  
 Each set of multiple f0 extractions is stored in its own folder. 
@@ -177,15 +177,15 @@ Visscher, M.; Wiering, F. Fuzzy Frequencies: Finding tonal structures in audio r
 
 ```bibtex
 @article{visscher2025fuzzy,
-  author       = {Mirjam Visscher and
-                  Frans Wiering},
-  title        = {Fuzzy Frequencies: Finding tonal structures in audio recordings of Renaissance polyphony},
-  journal      = {*upon publication*},  % Add actual journal name if available
-  year         = {2025},
-  volume       = {*upon publication*},  % Add volume if available
-  number       = {*upon publication*},  % Add issue number if available
-  pages        = {*upon publication*},  % Add page range if available
-  doi          = {*upon publication*},
+  title     = {Fuzzy Frequencies: Finding Tonal Structures in Audio Recordings of Renaissance Polyphony},
+  author    = {Visscher, M. and Wiering, F.},
+  journal   = {Heritage},
+  volume    = {8},
+  number    = {5},
+  pages     = {164},
+  year      = {2025},
+  doi       = {10.3390/heritage8050164},
+  url       = {https://doi.org/10.3390/heritage8050164}
 }
 ```
 ## References 
