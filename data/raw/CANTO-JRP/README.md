@@ -20,7 +20,7 @@ Due to copyright restrictions, the recordings themselves are not publicly availa
 
 The dataset is described in the article:
 
-Visscher, M., & Wiering, F. (2025). Fuzzy Frequencies: Finding Tonal Structures in Audio Recordings of Renaissance Polyphony. Heritage, 8(5), 164. https://doi.org/10.3390/heritage8050164
+Visscher, M., & Wiering, F. (2025). Fuzzy Frequencies: Finding Tonal Structures in Audio Recordings of Renaissance Polyphony. *Heritage*, 8(5), 164. https://doi.org/10.3390/heritage8050164
 
 ## Folder Structure  
 Each set of multiple f0 extractions is stored in its own folder. 
@@ -173,7 +173,7 @@ For full license details, see the [Creative Commons License Page](https://creati
 
 Finally, if you use the code in a research project, please reference it as:
 
-Visscher, M.; Wiering, F. Fuzzy Frequencies: Finding tonal structures in audio recordings of Renaissance polyphony. *Journal name* 2025, 1-22.
+Visscher, M., & Wiering, F. (2025). Fuzzy Frequencies: Finding Tonal Structures in Audio Recordings of Renaissance Polyphony. *Heritage*, 8(5), 164. https://doi.org/10.3390/heritage8050164
 
 ```bibtex
 @article{visscher2025fuzzy,

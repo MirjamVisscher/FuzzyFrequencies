@@ -11,7 +11,7 @@ Fuzzy Frequencies is a framework to analyse the pitch content of symbolic encodi
 
 The method is introduced and described in the article:
 
-Visscher, M., & Wiering, F. (2025). Fuzzy Frequencies: Finding Tonal Structures in Audio Recordings of Renaissance Polyphony. Heritage, 8(5), 164. https://doi.org/10.3390/heritage8050164
+Visscher, M., & Wiering, F. (2025). Fuzzy Frequencies: Finding Tonal Structures in Audio Recordings of Renaissance Polyphony. *Heritage*, 8(5), 164. https://doi.org/10.3390/heritage8050164
 
 ## Folder structure
 ```plaintext
@@ -439,7 +439,7 @@ This work is licensed under the [MIT License](https://opensource.org/licenses/MI
 
 Finally, if you use the code in a research project, please reference it as:
 
-Visscher, M.; Wiering, F. Fuzzy Frequencies: Finding tonal structures in audio recordings of Renaissance polyphony. *Journal name* 2025, 1-22.
+Visscher, M., & Wiering, F. (2025). Fuzzy Frequencies: Finding Tonal Structures in Audio Recordings of Renaissance Polyphony. *Heritage*, 8(5), 164. https://doi.org/10.3390/heritage8050164
 
 ```bibtex
 @article{visscher2025fuzzy,
