@@ -48,24 +48,31 @@ class Multif0Extraction:
         information = f"file_name:\n{self.file_name}\n\nexperiment:\n{self.experiment}\ntitle:\n{self.title}"
         return information
         
+    
     def pitch_deviation(self):
         """Calculate the deviation from the concert pitch of the audio file.
+        Corrrected version:
+            1) calculates the correct weighted average
+            2) also fit for instruments with narrow pitch bands such as lute and organ
         Returns:
             float: the deviation in midi distance from most frequent pitch
-                """
+                """        
         # get the most frequent multif0
         longfreqs = self.freqs.drop(columns=['timestamp']).melt().dropna().drop(columns=['variable'])
-        longfreqs = longfreqs.value_counts().sort_index().reset_index()
-        # most_frequent_index = longfreqs[0].idxmax()
-        most_frequent_index = longfreqs[longfreqs.columns[1]].idxmax()
-        # get the neighboring frequencies, 2 below, 2 above
-        peak = longfreqs.loc[most_frequent_index - 2 : most_frequent_index + 2].copy()
+        #turn freqs into midi
+        longmidi=longfreqs['value'].apply(get_miditone)
+        longmidicount = longmidi.value_counts().sort_index().reset_index()
+        most_frequent_index = longmidicount[longmidicount.columns[1]].idxmax()
+        most_frequent_value = longmidicount.loc[most_frequent_index, 'value']
+        # select rows within ±0.5 MIDI values
+        peak = longmidicount[
+            (longmidicount['value'] > most_frequent_value - 0.5) &
+            (longmidicount['value'] < most_frequent_value + 0.5)
+        ].copy()
         # make sure the values are numeric
         peak['value'] = pd.to_numeric(peak['value'], errors='coerce')
         # get the miditone of both freqencies and calculate the weighted mean
-        peak['miditone'] = peak['value'].apply(get_miditone)
-        # weighted_avg = (peak['miditone'] * peak[0]).sum() / peak[0].sum()
-        weighted_avg = (peak['miditone'] * peak[peak.columns[0]]).sum() / peak[peak.columns[0]].sum()
+        weighted_avg = (peak['value'] * peak['count']).sum() / peak['count'].sum()
         # get the difference in cents between that miditone and the miditone, rounded to the closest integer
         deviation = weighted_avg-round(weighted_avg)
         
